@@ -685,11 +685,7 @@
 <script>
 const heroSwiper = new Swiper(".heroSwiper", {
 
-    effect: "fade",
-
-    fadeEffect: {
-        crossFade: true
-    },
+    effect: "slide",
 
     loop: true,
 
@@ -698,7 +694,7 @@ const heroSwiper = new Swiper(".heroSwiper", {
         disableOnInteraction: false
     },
 
-    speed: 1200,
+    speed: 1000,
 
     pagination: {
         el: ".hero-pagination",
@@ -876,17 +872,16 @@ contactForm.addEventListener("submit", function(e){
 
     .then(function(){
 
-        ✓ Message Sent Successfully!
+    alert(
+        "✓ Message Sent Successfully!\n\nThank you for contacting us.\nWe'll get back to you soon."
+    );
 
-Thank you for contacting us.
-We'll get back to you soon.
+    contactForm.reset();
 
-        contactForm.reset();
+    sendBtn.innerText = "SEND MESSAGE";
+    sendBtn.disabled = false;
 
-        sendBtn.innerText = "SEND MESSAGE";
-        sendBtn.disabled = false;
-
-    })
+})
 
     .catch(function(error){
 
