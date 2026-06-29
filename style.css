@@ -442,7 +442,9 @@ padding-top: 100px;
 }
 
 
-
+.hero-desc{
+    text-wrap: balance;
+}
 
 /*--------------------------------------
         TEXT
