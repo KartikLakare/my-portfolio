@@ -685,30 +685,16 @@
 <script>
 const heroSwiper = new Swiper(".heroSwiper", {
 
-    effect: "creative",
+    effect: "slide",   // Normal smooth slide
+loop: true,
 
-    creativeEffect: {
-
-        prev: {
-            translate: ["-20%", 0, -1],
-            opacity: 0
-        },
-
-        next: {
-            translate: ["100%", 0, 0],
-            opacity: 0
-        }
-
-    },
-
-    loop: true,
+    speed: 800,
 
     autoplay: {
         delay: 5000,
-        disableOnInteraction: false
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false
     },
-
-    speed: 1000,
 
     pagination: {
         el: ".hero-pagination",
@@ -718,11 +704,17 @@ const heroSwiper = new Swiper(".heroSwiper", {
     navigation: {
         nextEl: ".hero-next",
         prevEl: ".hero-prev"
-    }
+    },
+
+    observer: true,
+    observeParents: true,
+    updateOnWindowResize: true,
+
+    watchSlidesProgress: true,
+    preventInteractionOnTransition: true
 
 });
 </script>
-
 
 
 
