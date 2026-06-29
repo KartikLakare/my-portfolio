@@ -105,6 +105,20 @@ body{
 }
 
 
+@media(max-width:768px){
+
+    .watermark{
+
+        font-size:8rem;
+
+        right:10px;
+
+        top:10px;
+
+    }
+
+}
+
 /*======================================
             HEADER
 ======================================*/
@@ -366,6 +380,8 @@ background:rgba(15,15,20,.35);   /* कमी opacity */
 
 }
 
+
+
 /*======================================
             HERO SECTION
 ======================================*/
@@ -445,7 +461,6 @@ padding-top: 100px;
 .hero-title{
     font-size:90px;
     line-height:.95;
- white-space: nowrap;
 }
 
 .hero-title span{
@@ -463,6 +478,7 @@ padding-top: 100px;
     line-height:1.8;
 }
 
+
 /*--------------------------------------
         BUTTONS
 --------------------------------------*/
@@ -470,6 +486,7 @@ padding-top: 100px;
 .hero-buttons{
     display:flex;
     gap:15px;
+
 }
 
 .btn-primary{
@@ -584,6 +601,7 @@ padding-top: 100px;
     .hero-buttons{
         justify-content:center;
         flex-wrap:wrap;
+margin-bottom: 30px;
     }
 
     .hero-image{
@@ -600,6 +618,11 @@ padding-top: 100px;
         min-height:700px;
         height:auto;
     }
+
+
+
+
+
 
     .hero-container{
         display:flex;
@@ -623,21 +646,34 @@ padding-top: 100px;
         margin-bottom:8px;
     }
 
-    .hero-title{
-        font-size:48px;
-        line-height:1.1;
-        margin-bottom:10px;
-    }
+  
 
     .hero-desc{
         margin:10px 0 20px;
     }
 
 }
-.heroSwiper .swiper-slide:nth-child(2) .hero-title{
-    font-size:80px;      /* 90px असेल तर 80px करा */
-    line-height:1;
+/* FIXED HERO MOBILE */
+@media (max-width:768px){
+
+    .hero-title{
+        font-size:48px !important;
+        line-height:0.95 !important;
+        margin-bottom:10px;
+            }
+
+    .hero-buttons{
+        justify-content:center;
+        flex-wrap:nowrap;
+        gap:15px;
+            }
+
+    .hero-pagination{
+                width:auto;
+    }
+
 }
+
 
 
 /*======================================
