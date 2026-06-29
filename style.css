@@ -601,9 +601,8 @@ padding-top: 100px;
     .hero-buttons{
         justify-content:center;
         flex-wrap:wrap;
-margin-bottom: 30px;
-    }
 
+    }
 
     .hero-image{
         width:90%;
