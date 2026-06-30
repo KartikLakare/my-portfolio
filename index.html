@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Kartik Advertising Solutions</title>
-    <!-- ही ओळ तुमची CSS फाईल जोडते -->
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
 
@@ -20,12 +34,10 @@
 
     <div class="header-container">
 
-        <!-- Logo -->
         <a href="#" class="site-logo">
             <img src="images/logo.png" alt="Kartik Advertising">
         </a>
 
-        <!-- Menu Button -->
         <button class="menu-toggle" id="menuToggle">
 
             <span></span>
@@ -38,24 +50,19 @@
 
 </header>
 
-
 <!-- Overlay -->
 
 <div class="menu-overlay" id="menuOverlay"></div>
 
-
 <!-- Side Menu -->
 
 <nav class="side-menu" id="sideMenu">
-
-    <!-- Close -->
 
     <button class="menu-close" id="menuClose">
 
         <i class="fas fa-times"></i>
 
     </button>
-
 
     <ul>
 
@@ -69,7 +76,6 @@
             </a>
         </li>
 
-
         <li>
             <a href="#services">
                 <div class="icon-box">
@@ -79,7 +85,6 @@
                 <span>SERVICES</span>
             </a>
         </li>
-
 
         <li>
             <a href="#portfolio">
@@ -91,7 +96,6 @@
             </a>
         </li>
 
-
         <li>
             <a href="#testimonials">
                 <div class="icon-box">
@@ -101,7 +105,6 @@
                 <span>TESTIMONIALS</span>
             </a>
         </li>
-
 
         <li>
             <a href="#contact">
@@ -117,270 +120,479 @@
 
 </nav>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- ================= HERO ================= -->
 
 <section class="hero-section">
 
-    <div class="swiper heroSwiper">
+<div class="swiper heroSwiper">
 
-        <div class="swiper-wrapper">
+<div class="swiper-wrapper">
 
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-                <div class="hero-container">
+<!-- Slide 1 -->
 
-                    <div class="hero-left">
-                        <span class="hero-subtitle">
-                            WEBSITE DESIGN & DEVELOPMENT
-                        </span>
+<div class="swiper-slide">
 
-                       <h1 class="hero-title hero-title-website">
-    BUILD YOUR <br>
-    <span>WEBSITE</span>
-</h1>
+<div class="hero-container">
 
-                        <p class="hero-desc">
-                            Professional, responsive and SEO-friendly web designed to grow your business online.
-                        </p>
+<div class="hero-left">
 
-                        <div class="hero-buttons">
-                            <a href="#contact" class="btn-primary">
-                                Get Started
-                            </a>
-
-                            <a href="#portfolio" class="btn-outline">
-                                View Portfolio
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="hero-right">
-                        <img src="images/Banner1.png" class="hero-image">
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="swiper-slide">
-                <div class="hero-container">
-
-                    <div class="hero-left">
-
-                        <span class="hero-subtitle">
-                            LOGO & BRAND IDENTITY
-                        </span>
+<span class="hero-subtitle">
+WEBSITE DESIGN & DEVELOPMENT
+</span>
 
 <h1 class="hero-title">
-    CREATE YOUR
-    <br>
+BUILD YOUR <br>
+<span>WEBSITE</span>
+</h1>
+
+<p class="hero-desc">
+
+Professional, responsive and SEO-friendly
+websites designed to grow your business online.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#contact" class="btn-primary">
+
+Get Started
+
+</a>
+
+<a href="#portfolio" class="btn-outline">
+
+View Portfolio
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img src="images/Banner1.png"
+class="hero-image"
+alt="Website">
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= SLIDE 2 ================= -->
+
+<div class="swiper-slide">
+
+    <div class="hero-container">
+
+        <div class="hero-left">
+
+            <span class="hero-subtitle">
+                LOGO & BRAND IDENTITY
+            </span>
+
+           <h1 class="hero-title hero-title-brand">
+    CREATE&nbsp;YOUR <br>
     <span>BRAND</span>
 </h1>
 
-                        <p class="hero-desc">
-                            Unique logos and complete branding solutions
-                            that build trust and recognition.
-                        </p>
+            <p class="hero-desc">
+                Unique logos and complete branding solutions
+                that build trust and recognition.
+            </p>
 
-                        <div class="hero-buttons">
-                            <a href="#contact" class="btn-primary">
-                                Get Started
-                            </a>
+            <div class="hero-buttons">
 
-                            <a href="#portfolio" class="btn-outline">
-                                View Portfolio
-                            </a>
-                        </div>
+                <a href="#contact" class="btn-primary">
+                    Get Started
+                </a>
 
-                    </div>
+                <a href="#portfolio" class="btn-outline">
+                    View Portfolio
+                </a>
 
-                    <div class="hero-right">
-                        <img src="images/Banner2.png" class="hero-image">
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="swiper-slide">
-                <div class="hero-container">
-
-                    <div class="hero-left">
-
-                        <span class="hero-subtitle">
-                            SOCIAL MEDIA & MARKETING
-                        </span>
-
-                        <h1 class="hero-title hero-title-business">
-    GROW YOUR <br>
-    <span>BUSINESS</span>
-</h1>
-
-                        <p class="hero-desc">
-                            Creative social media designs and digital marketing
-                            strategies that generate results.
-                        </p>
-
-                        <div class="hero-buttons">
-                            <a href="#contact" class="btn-primary">
-                                Get Started
-                            </a>
-
-                            <a href="#portfolio" class="btn-outline">
-                                View Portfolio
-                            </a>
-                        </div>
-
-                    </div>
-
-                    <div class="hero-right">
-                        <img src="images/Banner3.png" class="hero-image">
-                    </div>
-
-                </div>
             </div>
 
         </div>
 
-        <!-- Navigation -->
-        <div class="swiper-button-prev hero-prev"></div>
-        <div class="swiper-button-next hero-next"></div>
+        <div class="hero-right">
 
-        <!-- Pagination -->
-        <div class="swiper-pagination hero-pagination"></div>
+            <img src="images/Banner2.png"
+                 class="hero-image"
+                 alt="Branding">
 
-    </div>
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section id="services">
- <div class="watermark">03</div>
-    <div class="section-title">
-        <p class="subtitle">WHAT I OFFER</p> 
-    <h2 class="common-title services-title">
-    <span class="white-text">OUR</span>
-    <span class="orange-text">SERVICES</span>
-</h2>
-        <p>End-to-end launch, visibility, and commercial advertising solutions built for startups.</p>
-    </div>
-    
-  <div class="services-grid">
-    <!-- १. Logo & Branding -->
-    <div class="service-card">
-        <div class="icon">
-            <img src="images/Logo_Branding.png" alt="Logo & Branding" width="60">
         </div>
-        <h3>Logo & Branding</h3>
-        <p>Crafting completely unique, highly professional, and memorable logos anchoring your market presence.</p>
-        <ul>
-            <li>✔ Logo & Wordmark</li>
-            <li>✔ Brand Guidelines</li>
-            <li>✔ Color & Typography</li>
-        </ul>
+
     </div>
 
-    <!-- २. Website Design -->
-    <div class="service-card">
-        <div class="icon">
-            <img src="images/websitedesign.png" alt="Website Design" width="60">
+</div>
+
+<!-- ================= SLIDE 3 ================= -->
+
+<div class="swiper-slide">
+
+    <div class="hero-container">
+
+        <div class="hero-left">
+
+            <span class="hero-subtitle">
+                SOCIAL MEDIA & DIGITAL MARKETING
+            </span>
+
+            <h1 class="hero-title">
+                GROW YOUR <br>
+                <span>BUSINESS</span>
+            </h1>
+
+            <p class="hero-desc">
+                Creative social media campaigns and
+                digital marketing strategies that
+                generate real business growth.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#contact" class="btn-primary">
+                    Get Started
+                </a>
+
+                <a href="#portfolio" class="btn-outline">
+                    View Portfolio
+                </a>
+
+            </div>
+
         </div>
-        <h3>Website Design</h3>
-        <p>Building modern, fully responsive, and single-page corporate layouts optimized for business conversion.</p>
-        <ul>
-            <li>✔ Single Page Layouts</li>
-            <li>✔ Mobile Optimized Layouts</li>
-            <li>✔ Modern Interactive UI</li>
-        </ul>
+
+        <div class="hero-right">
+
+            <img src="images/Banner3.png"
+                 class="hero-image"
+                 alt="Marketing">
+
+        </div>
+
     </div>
 
-    <!-- ३. Social Media Post -->
-    <div class="service-card">
-        <div class="icon">
-            <img src="images/Social_Media_Post.png" alt="Social Media Post" width="60">
-        </div>
-        <h3>Social Media Post</h3>
-        <p>Designing scroll-stopping corporate layouts, Instagram templates, and targeted promotional reels.</p>
-        <ul>
-            <li>✔ Instagram/Facebook Posts</li>
-            <li>✔ Story & Reel Graphics</li>
-            <li>✔ Festival Post Packs</li>
-        </ul>
-    </div>
+</div>
 
-    <!-- ४. Digital Marketing -->
-    <div class="service-card">
-        <div class="icon">
-            <img src="images/Digita_Marketing.png" alt="Digital Marketing" width="60">
-        </div>
-        <h3>Digital Marketing</h3>
-        <p>Targeting the perfect buyer profile with precise local SEO metrics, Google Ads, and optimized social ad accounts.</p>
-        <ul>
-            <li>✔ Meta Ad Setup</li>
-            <li>✔ Google PPC Campaigns</li>
-            <li>✔ Lead Generation</li>
-        </ul>
-    </div>
+</div>
 
-    <!-- ५. Graphic Design -->
-    <div class="service-card">
-        <div class="icon">
-            <img src="images/Graphic_Design.png" alt="Graphic Design" width="60">
-        </div>
-        <h3>Graphic Design</h3>
-        <p>Premium physical brand materials from executive visiting cards to extensive menu systems and product brochures.</p>
-        <ul>
-            <li>✔ Visiting/Business Cards</li>
-            <li>✔ Corporate Brochures</li>
-            <li>✔ Menu Card Designs</li>
-        </ul>
-    </div>
+<!-- Navigation -->
 
-    <!-- ६. Political Banners -->
-    <div class="service-card">
-        <div class="icon">
-            <img src="images/Political_Banners.png" alt="Political Banners" width="60">
-        </div>
-        <h3>Political Banners</h3>
-        <p>Heavy impact outdoor media solutions and high resolution hoardings designed meticulously for community public figures.</p>
-        <ul>
-            <li>✔ Campaign Hoardings</li>
-            <li>✔ Public Rally Banners</li>
-            <li>✔ High-Res Print Outputs</li>
-        </ul>
-    </div>
+<div class="swiper-button-prev hero-prev"></div>
+<div class="swiper-button-next hero-next"></div>
+
+<!-- Pagination -->
+
+<div class="swiper-pagination hero-pagination"></div>
+
 </div>
 
 </section>
+
+<!-- ================= MOVING STRIP ================= -->
+
+<section class="services-strip">
+
+    <div class="strip-track">
+
+        <span>Websites</span>
+        <span class="star">★</span>
+
+        <span>Branding</span>
+        <span class="star">★</span>
+
+        <span>Social Media</span>
+        <span class="star">★</span>
+
+        <span>Digital Marketing</span>
+        <span class="star">★</span>
+
+        <span>Graphic Design</span>
+        <span class="star">★</span>
+
+        <span>Political Campaigns</span>
+        <span class="star">★</span>
+
+        <!-- Duplicate for infinite scroll -->
+
+        <span>Websites</span>
+        <span class="star">★</span>
+
+        <span>Branding</span>
+        <span class="star">★</span>
+
+        <span>Social Media</span>
+        <span class="star">★</span>
+
+        <span>Digital Marketing</span>
+        <span class="star">★</span>
+
+        <span>Graphic Design</span>
+        <span class="star">★</span>
+
+        <span>Political Campaigns</span>
+        <span class="star">★</span>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+    <div class="watermark">03</div>
+
+    <div class="section-title">
+
+        <p class="subtitle">
+            WHAT WE OFFER
+        </p>
+
+        <h2 class="common-title">
+
+            <span class="white-text">OUR</span>
+
+            <span class="orange-text">SERVICES</span>
+
+        </h2>
+
+        <p class="description">
+
+            End-to-end launch, visibility and commercial
+            advertising solutions built for modern businesses.
+
+        </p>
+
+    </div>
+
+    <div class="services-grid">
+
+        <!-- Card 1 -->
+
+        <div class="service-card">
+
+            <div class="service-glow"></div>
+
+            <div class="icon">
+
+                <img src="images/Logo_Branding.png" alt="">
+
+            </div>
+
+            <h3>Logo & Branding</h3>
+
+            <p>
+
+                Crafting unique brand identities that
+                make your business unforgettable.
+
+            </p>
+
+            <ul>
+
+                <li>✔ Logo Design</li>
+
+                <li>✔ Brand Identity</li>
+
+                <li>✔ Brand Guidelines</li>
+
+            </ul>
+
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="service-card">
+
+            <div class="service-glow"></div>
+
+            <div class="icon">
+
+                <img src="images/websitedesign.png" alt="">
+
+            </div>
+
+            <h3>Website Design</h3>
+
+            <p>
+
+                Responsive and modern websites built
+                to convert visitors into customers.
+
+            </p>
+
+            <ul>
+
+                <li>✔ Business Website</li>
+
+                <li>✔ Landing Page</li>
+
+                <li>✔ Responsive Design</li>
+
+            </ul>
+
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="service-card">
+
+            <div class="service-glow"></div>
+
+            <div class="icon">
+
+                <img src="images/Social_Media_Post.png" alt="">
+
+            </div>
+
+            <h3>Social Media Design</h3>
+
+            <p>
+
+                Creative social media graphics
+                that increase engagement.
+
+            </p>
+
+            <ul>
+
+                <li>✔ Instagram Posts</li>
+
+                <li>✔ Facebook Creatives</li>
+
+                <li>✔ Story Design</li>
+
+            </ul>
+
+        </div>
+
+        <!-- Card 4 -->
+
+        <div class="service-card">
+
+            <div class="service-glow"></div>
+
+            <div class="icon">
+
+                <img src="images/Digita_Marketing.png" alt="">
+
+            </div>
+
+            <h3>Digital Marketing</h3>
+
+            <p>
+
+                Grow your business with
+                Google Ads and Meta Ads.
+
+            </p>
+
+            <ul>
+
+                <li>✔ Google Ads</li>
+
+                <li>✔ Facebook Ads</li>
+
+                <li>✔ Lead Generation</li>
+
+            </ul>
+
+        </div>
+
+        <!-- Card 5 -->
+
+        <div class="service-card">
+
+            <div class="service-glow"></div>
+
+            <div class="icon">
+
+                <img src="images/Graphic_Design.png" alt="">
+
+            </div>
+
+            <h3>Graphic Design</h3>
+
+            <p>
+
+                Premium print and digital
+                designs for your business.
+
+            </p>
+
+            <ul>
+
+                <li>✔ Brochure</li>
+
+                <li>✔ Visiting Card</li>
+
+                <li>✔ Menu Card</li>
+
+            </ul>
+
+        </div>
+
+        <!-- Card 6 -->
+
+        <div class="service-card">
+
+            <div class="service-glow"></div>
+
+            <div class="icon">
+
+                <img src="images/Political_Banners.png" alt="">
+
+            </div>
+
+            <h3>Political Campaign</h3>
+
+            <p>
+
+                High-quality campaign banners
+                and political branding designs.
+
+            </p>
+
+            <ul>
+
+                <li>✔ Flex Design</li>
+
+                <li>✔ Campaign Banner</li>
+
+                <li>✔ Social Campaign</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
 
 
 
@@ -667,7 +879,76 @@
 
 
 
+<footer class="footer">
 
+    <div class="footer-container">
+
+        <!-- Left -->
+        <div class="footer-box">
+            <img src="images/logo.png" alt="Logo" class="footer-logo">
+
+            <p>
+                Kartik Advertising Solutions helps businesses grow through
+                Website Design, Branding, Digital Marketing, Graphic Design
+                and Political Campaigns.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-box">
+            <h3>Services</h3>
+
+            <a href="#">Website Design</a>
+            <a href="#">Branding</a>
+            <a href="#">Graphic Design</a>
+            <a href="#">Digital Marketing</a>
+            <a href="#">Political Campaigns</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-box">
+            <h3>Contact</h3>
+
+            <p><i class="fas fa-phone"></i> +91 9511070303</p>
+
+            <p><i class="fas fa-envelope"></i> kartiklakare8@gmail.com</p>
+
+            <p><i class="fas fa-location-dot"></i> Kopargaon, Maharashtra</p>
+
+            <div class="footer-social">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2025 Kartik Advertising Solutions. All Rights Reserved.
+
+    </div>
+
+</footer>
 
 
 
@@ -902,6 +1183,64 @@ contactForm.addEventListener("submit", function(e){
     });
 
 });
+
+
+document.querySelectorAll(".service-card").forEach((card)=>{
+
+    card.addEventListener("mousemove",(e)=>{
+
+        const rect=card.getBoundingClientRect();
+
+        const x=e.clientX-rect.left;
+
+        const y=e.clientY-rect.top;
+
+        card.style.setProperty("--mx",x+"px");
+
+        card.style.setProperty("--my",y+"px");
+
+    });
+
+});
+
+
+
+const track=document.querySelector(".strip-track");
+
+const totalWidth=track.scrollWidth/2;
+
+gsap.to(track,{
+
+    x:-totalWidth,
+
+    duration:25,
+
+    ease:"none",
+
+    repeat:-1,
+
+    modifiers:{
+
+        x:gsap.utils.unitize(x=>parseFloat(x)%totalWidth)
+
+    }
+
+});
+
+document.querySelector(".services-strip").addEventListener("mouseenter",()=>{
+
+    gsap.globalTimeline.pause();
+
+});
+
+document.querySelector(".services-strip").addEventListener("mouseleave",()=>{
+
+    gsap.globalTimeline.resume();
+
+});
+
+
+
 
 </script>
 
