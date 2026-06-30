@@ -2092,3 +2092,22 @@ font-size:18px;
 
 }
 
+
+@media(max-width:768px){
+
+.hero-buttons{
+    gap:12px;
+}
+
+.btn-primary,
+.btn-outline{
+
+    padding:12px 20px;
+    font-size:14px;
+    white-space:nowrap;
+    border-radius:8px;
+
+}
+
+}
+
