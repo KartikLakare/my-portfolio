@@ -517,9 +517,117 @@ alt="Website">
 
 
 
+<!-- ===================== ABOUT ===================== -->
 
+<section id="about">
 
+    <div class="container">
 
+        <div class="about-wrapper">
+
+            <!-- LEFT IMAGE -->
+
+            <div class="about-image">
+
+                <div class="about-image-box">
+
+                    <img src="images/profile-img.png"
+                        alt="Kartik Advertising Solutions">
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT CONTENT -->
+
+            <div class="about-content">
+
+                <p class="subtitle">
+                    WHO WE ARE
+                </p>
+
+                <h2 class="common-title">
+                    <span class="white-text">CREATIVE</span><br>
+                    <span class="orange-text">SOLUTIONS</span>
+                </h2>
+
+               <p class="about-description">
+    We help businesses build strong brands through creative design, strategic thinking, and digital innovation. Every solution is crafted to increase visibility, build trust, and drive long-term business growth.
+</p>
+
+               
+
+                <!-- FEATURES -->
+
+                <div class="about-info">
+
+                    <div class="about-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Creative & Strategic Approach</span>
+                    </div>
+
+                    <div class="about-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Transparent Communication</span>
+                    </div>
+
+                    <div class="about-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>On-Time Project Delivery</span>
+                    </div>
+
+                    <div class="about-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Long-Term Client Relationships</span>
+                    </div>
+
+                    <div class="about-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Attention to Every Detail</span>
+                    </div>
+
+                    <div class="about-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Premium Quality Standards</span>
+                    </div>
+
+                </div>
+
+                <!-- COUNTER -->
+
+<div class="about-counter">
+
+    <div class="counter-card">
+    <h3 class="counter" data-target="100">0</h3>
+    <p>Projects</p>
+</div>
+<div class="counter-card">
+    <h3 class="counter" data-target="50">0</h3>
+    <p>Happy Clients</p>
+</div>
+<div class="counter-card">
+    <h3 class="counter" data-target="8">0</h3>
+    <p>Yrs Experience</p>
+</div>
+
+</div>
+
+                
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- WATERMARK -->
+
+    <div class="section-number">
+        02
+    </div>
+
+</section>
 
 
 
@@ -1435,8 +1543,41 @@ window.addEventListener("load",()=>{
 
 </script>
 
+<script>
+window.addEventListener('scroll', function() {
+    const counters = document.querySelectorAll('.counter');
+    const aboutSection = document.getElementById('about');
+    const position = aboutSection.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.5;
 
+    // जर ॲनिमेशन एकदा झाले असेल तर localStorage मध्ये 'animated' सेव्ह होईल
+    if (position < screenPosition && !localStorage.getItem('animated')) {
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            let count = 0;
+            const updateCount = () => {
+                const inc = target / 50;
+                count += inc;
+                if (count < target) {
+                    counter.innerText = Math.ceil(count) + "+";
+                    setTimeout(updateCount, 40);
+                } else {
+                    counter.innerText = target + "+";
+                }
+            };
+            updateCount();
+        });
+        
+        // ॲनिमेशन झाल्यावर 'animated' फ्लॅग सेव्ह करा
+        localStorage.setItem('animated', 'true');
+    }
+});
 
-
+// जर तुम्हाला प्रत्येक वेळी रिफ्रेश केल्यावर हवे असेल, 
+// तर फक्त पेजच्या सुरुवातीला हे टाका जेणेकरून जुना डेटा निघून जाईल:
+window.onload = function() {
+    localStorage.removeItem('animated');
+};
+</script>
 </body>
 </html>
