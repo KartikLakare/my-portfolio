@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Gallery</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="gallery-page">
+
+<div class="container">
+
+<a href="index.html" class="back-btn">← Back to Home</a>
+
+<h1 class="gallery-title" id="galleryTitle"></h1>
+
+<div class="gallery-grid" id="galleryGrid">
+
+</div>
+
+</div>
+
+</section>
+
+<div class="lightbox" id="lightbox">
+
+    <span class="close">&times;</span>
+
+    <span class="prev">&#10094;</span>
+
+    <img id="lightbox-img" src="" alt="">
+
+    <span class="next">&#10095;</span>
+
+</div>
+
+<script>
+
+const portfolio = {
+
+website:[
+"images/website1.jpg",
+"images/website2.jpg",
+"images/website3.jpg",
+"images/website4.jpg"
+],
+
+logo:[
+    "images/Gayatrimakeoverlogo.png",
+    "images/Rayavadapavlogo.png",
+"images/Rayavadapavlogo1.png",
+],
+
+social:[
+"images/social1.jpg",
+"images/social2.jpg",
+"images/social3.jpg",
+"images/social4.jpg"
+],
+
+print:[
+"images/print1.jpg",
+"images/print2.jpg",
+"images/print3.jpg",
+"images/print4.jpg"
+],
+
+marketing:[
+"images/marketing1.jpg",
+"images/marketing2.jpg",
+"images/marketing3.jpg",
+"images/marketing4.jpg"
+],
+
+political:[
+"images/political1.jpg",
+"images/political2.jpg",
+"images/political3.jpg",
+"images/political4.jpg"
+]
+
+};
+
+const category=new URLSearchParams(window.location.search).get("category");
+
+const title=document.getElementById("galleryTitle");
+
+const grid=document.getElementById("galleryGrid");
+
+const titles = {
+    website: "Website Development",
+    logo: "Logo & Branding",
+    social: "Social Media Design",
+    print: "Print Design",
+    marketing: "Digital Marketing",
+    political: "Political Campaign"
+};
+
+title.innerHTML = titles[category];
+
+let current = 0;
+
+portfolio[category].forEach((img,index)=>{
+
+grid.innerHTML += `
+
+<div class="gallery-item">
+
+<img src="${img}" onclick="openImage(${index})">
+
+</div>
+
+`;
+
+});
+
+const lightbox = document.getElementById("lightbox");
+
+const lightImg = document.getElementById("lightbox-img");
+
+function openImage(index){
+
+current = index;
+
+lightImg.src = portfolio[category][current];
+
+lightbox.style.display = "flex";
+
+}
+
+document.querySelector(".close").onclick = () => {
+
+lightbox.style.display = "none";
+
+};
+
+document.querySelector(".next").onclick = () => {
+
+current++;
+
+if(current >= portfolio[category].length){
+
+current = 0;
+
+}
+
+lightImg.src = portfolio[category][current];
+
+};
+
+document.querySelector(".prev").onclick = () => {
+
+current--;
+
+if(current < 0){
+
+current = portfolio[category].length - 1;
+
+}
+
+lightImg.src = portfolio[category][current];
+
+};
+
+lightbox.onclick = (e) => {
+
+if(e.target === lightbox){
+
+lightbox.style.display = "none";
+
+}
+
+};</script>
+
+</body>
+
+</html>
